@@ -1,0 +1,866 @@
+@charset "utf-8";
+
+/* --------------------------------------共通*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight:400;
+  /* outline: 1px solid #4203ff; */
+}
+
+html,
+body {
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+section {
+  margin-bottom: 100px;
+}
+
+a { 
+  text-decoration: none;
+}
+
+a:any-link {
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.top-wrapper, .top-wrapper-2 {
+  max-width: 1200px;
+  width: calc(100% - 100px);
+  margin: 0 auto;
+}
+
+.top-wrapper-sub {
+  max-width: 900px;
+  width: calc(100% - 100px);
+  margin: 0 auto;
+}
+
+.sp-hamburger {
+  display: none;
+}
+/* ----------------------
+---------top-------------
+------------------------*/
+
+
+button.drawer-toggle.drawer-hamburger {
+  display: none;
+}
+
+.top-header {
+  background-color: rgba(247, 94, 94, 0.75);
+  position: -webkit-sticky;
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.top-header-logo {
+  width: 70px;
+  margin: 15px 0;
+}
+
+.top-header-nav-ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-header-nav-list:first-child {
+  margin-right: 8%;
+}
+
+.top-header-nav-list:nth-child(7) {
+  margin-right: 14%;
+}
+
+.top-header-nav-list-a {
+  font-size: 24px;
+}
+
+.top-header-nav-list-a:hover {
+  color: #bf3535;
+  font-size: 30px;
+}
+
+.top-header-nav-list-a-sub {
+  font-size: 12px;
+}
+
+.wrapper-rel {
+  position: relative;
+}
+
+.top-header-contact {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #000;
+  width: 12%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.top-header-contact-img {
+  width: 70px;
+}
+
+.top-fv {
+  position: relative;
+  margin-bottom: 200px;
+}
+
+.top-fv-img {
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  object-fit: cover;
+}
+
+.top-fv-ttl {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-65%);
+  text-align: left;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.top-fv-text {
+  font-size: clamp(4.063rem, 3.417rem + 2.756vw, 6rem);
+  margin-bottom: 50px;
+  line-height: 110%;
+}
+
+.top-fv-text-sub {
+  font-size: clamp(1.5rem, 0.833rem + 2.844vw, 3.5rem);
+}
+
+.top-concept {
+  position: relative;
+}
+
+.top-concept-bg {
+  background-image: url(../img/logo-gray.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 550px;
+  aspect-ratio: 1/1;
+  position: absolute;
+  top: -160px;
+  left: -160px;
+  z-index: -1;
+}
+
+.wrapper-rel-2 {
+  position: relative;
+}
+
+.top-concept-list-img {
+  position: absolute;
+  top: -33px;
+  right: 46px;
+  width: 270px;
+  object-fit: cover;
+  filter: drop-shadow(50px -50px 0px #bfb046);
+  z-index: 20;
+}
+
+.top-concept-list {
+  display: flex;
+  gap: 20%;
+  margin-bottom: 160px;
+}
+
+.top-h3 {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.top-h3-ttl {
+  color: #000;
+  font-size: 32px;
+  text-align: left;
+  display: inline-block;
+}
+
+.top-h3-ttl-sub {
+  font-size: 16px;
+  text-align: center;
+}
+
+.top-concept-ul {
+  width: 100%;
+}
+
+.top-concept-li {
+  background-color: #F75E5E;
+  text-align: left;
+  padding: 0.3rem 2rem;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.top-concept-li:last-child {
+  margin-bottom: 0;
+}
+
+.top-concept-li-num {
+  font-size: 32px;
+  font-weight: 700;
+  margin-right: 1rem;
+}
+
+.top-concept-2 {
+  background-color: #F75E5E;
+}
+
+.top-concept-2-img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.top-concept-2-text {
+  padding: 50px;
+  text-align: justify;
+}
+
+.top-lesson {
+  background: linear-gradient(350deg, #fff 38%, #000 0);
+  text-align: left;
+  padding: 100px 0 200px;
+  position: relative;
+}
+
+.top-lesson-h3 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.top-lesson-ul {
+  letter-spacing: 8px;
+  line-height: 50px;
+  font-size: 19px;
+}
+
+.top-lesson-img {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 450px;
+  animation:top-lesson-img 20s linear infinite
+}
+
+@keyframes top-lesson-img {
+
+  0% {
+      transform:rotate(0deg);
+  }
+  100% {
+      transform:rotate(360deg);
+  }
+}
+
+.top-classes {
+  background-color: #F75E5E;
+}
+
+.top-calsses-flex {
+  display: inline-flex;
+  transform: translateX(-30px);
+}
+.top-h3-ttl-classes {
+  color: #fff;
+  margin: 50px 0 0 30px;
+}
+
+.top-classes-list {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.top-classes-link {
+  position: relative;
+  transform: skewX(-10deg);
+  width: 100%;
+  overflow: hidden;
+}
+
+.top-classes-link::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.25);
+  z-index: 1;
+}
+
+.top-classes-link:hover::before  {
+  background-color: rgba(255, 255, 255, 0.112);
+}
+
+
+.top-classes-link::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(1.125rem, 0.318rem + 1.261vw, 1.5rem);
+  font-weight: 700;
+}
+
+.top-classes-link-1::after {
+  content: "キッズクラス";
+}
+
+.top-classes-link-2::after {
+  content: "初心者クラス";
+}
+
+.top-classes-link-3::after {
+  content: "一般クラス";
+}
+
+.top-classes-link-4::after {
+  content: "女性クラス";
+}
+
+.top-classes-link-img {
+  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 3/4;
+  display: block;
+  transform: skewX(10deg) scale(1.3);
+}
+
+.top-section-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  max-width: 1200px;
+  width: calc(100% - 100px);
+  margin: 0 auto ;
+}
+
+.top-blog {
+  width: 55%;
+}
+
+.top-wrapper-2 {
+  display: contents;
+}
+
+.top-blog-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 25px;
+}
+
+.top-blog-card {
+  background-color: #F75E5E;
+}
+
+.top-blog-img {
+  display: block;
+  width: 100%; 
+  aspect-ratio: 2/1;
+}
+
+.top-blog-card-ttl {
+  display: block;
+  padding: 0.7rem;
+  text-align: left;
+}
+
+.top-blog-card-text {
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 制限したい行数 */
+  overflow: hidden;
+}
+
+.top-facebook {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-facebook-content {
+  background-color: #C4C4C4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.top-facebook-content-text {
+  color: #000;
+
+}
+
+.top-leaders-group {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.top-leaders-a-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(247, 94, 94, 0.75);
+  font-size: 32px;
+  width: 100px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top-leaders-img {
+  width: 50%;
+  object-fit: cover;
+  height: 350px;
+}
+
+.top-leaders-a {
+  width: 50%;
+  background-color: #000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-h3-ttl-leaders {
+  color: #fff;
+  text-align: center;
+}
+
+.top-h3-access{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.top-access-map {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+iframe {
+  display: block;
+}
+
+.top-access-ggl-map {
+  width: 500px;
+  aspect-ratio: 5/3;
+}
+
+.top-access-map-1 {
+  position: relative;
+}
+
+.top-access-map-1::after {
+  content: "松戸運動公園武道館";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(247, 94, 94, 0.5);
+  padding: 0.5rem 1.5rem;
+  z-index: 20;
+  color: #000;
+}
+
+.top-access-map-2 {
+  position: relative;
+}
+
+.top-access-map-2::after {
+  content: "南部柔道場";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(247, 94, 94, 0.5);
+  padding: 0.5rem 1.5rem;
+  z-index: 20;
+  color: #000;
+}
+
+.top-access-map-text {
+  color: #000;
+  text-align: left;
+  padding: 1rem 0.5rem;
+}
+
+.top-footer-cr {
+  background-color: #F75E5E;
+  padding: 30px;
+}
+
+@media screen and (max-width:1141px) {
+  .top-concept-list {
+    gap: 9%;
+  }
+
+  .top-lesson-img {
+    width: 330px;
+  }
+
+  .top-blog-list {
+    grid-gap: 14px;
+  }
+
+  .top-access-map {
+    justify-content: space-between;
+  }
+
+  .top-access-ggl-map {
+    width: 440px;
+  }
+}
+
+@media screen and (max-width:1023px) {
+
+  .top-header-nav {
+    display: none;
+  }
+
+  button.drawer-toggle.drawer-hamburger {
+    display: block;
+    background-color: rgba(247, 94, 94, 0.7);
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .drawer--right .drawer-hamburger, .drawer--right.drawer-open .drawer-nav, .drawer--right.drawer-open .drawer-navbar .drawer-hamburger {
+    bottom: 0;
+    top: unset;
+  }
+  .drawer--right.drawer-open button.drawer-hamburger {
+    right: 0;
+  }
+
+  button.drawer-hamburger-icon {
+    color: #FFF;
+  }
+
+  span.drawer-hamburger-icon, 
+  span.drawer-hamburger-icon:after, 
+  span.drawer-hamburger-icon:before {
+    background-color: #fff;
+  }
+  nav.drawer-nav {
+    background-color: #F75E5E;
+    padding: 30px 0;
+  }
+
+  .top-header-nav-list-a {
+    font-size: 18px;
+  }
+
+  .top-header-nav-list:first-child,
+  .top-header-nav-list:nth-child(7) {
+    margin-right: 0;
+  }
+
+  .top-header-nav-list {
+    margin-bottom: 30px;
+  }
+
+  .top-header-sp-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #000;
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+
+  .top-header-contact-img {
+    width: 28px;
+  }
+
+  .top-header-logo {
+    width: 90px;
+  }
+  
+  .sp-header-contact {
+    background-color: #000000c5;
+    margin-top: 50px;
+  }
+
+  .sp-header-contact:hover {
+    background-color: #000000;
+  }
+
+  .sp-header-contact-a {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .sp-header-contact-img {
+    width: 60px;
+  }
+
+  .sp-header-contact-sub {
+    align-items: center;
+    font-size: 26px;
+  }
+
+  .top-fv-img {
+    height: 60svh;
+  }
+
+  .top-fv-ttl {
+    transform: translateY(-50%);
+  }
+
+  .top-concept-list-img {
+    display: none;
+  }
+
+  .top-lesson-ul {
+    position: relative;
+    z-index: 50;
+  }
+
+  .top-lesson-img {
+    width: 270px;
+    top: 320px;
+  }
+
+  .top-classes {
+    padding: 100px 0;
+  }
+
+  .top-calsses-flex {
+    display: contents;
+  } 
+
+  .top-h3-ttl-classes {
+    margin: 0;
+    margin-bottom: 50px;
+  }
+
+  .top-classes-list {
+    flex-wrap: wrap;
+  }
+
+  .top-classes-link {
+    transform: none;
+    width: calc(100% - 50%);
+  }
+
+  .top-classes-link-img {
+    aspect-ratio: 4/3;
+  }
+
+  .top-section-flex {
+    display: contents;
+  }
+
+  .top-wrapper-2 {
+    display: block;
+  }
+
+  .top-blog {
+    width: 100%;
+  }
+
+  .top-facebook {
+    width: 100%;
+  }
+
+  .top-facebook-content {
+    height: 250px;
+  }
+
+  .top-access-map {
+    gap: 30px;
+  }
+
+  .top-access-map-1, .top-access-map-2 {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width:767px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .top-wrapper, .top-wrapper-2 {
+    width: calc(100% - 50px);
+  }
+
+  section {
+    margin-bottom: 50px;
+  }
+
+  .top-fv {
+    margin-bottom: 50px;
+  }
+
+  .top-concept-bg {
+    width: 370px;
+    top: -190px;
+    left: -100px;
+  }
+
+  .top-h3-ttl {
+    font-size: 19px;
+    margin-bottom: 30px;
+  }
+
+  .top-h3-ttl-sub {
+    font-size: 10px;
+  }
+
+  .top-concept-list {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  .top-concept-li {
+    margin-bottom: 15px;
+  }
+
+  .top-concept-li-num {
+    font-size: 24px;
+  }
+
+  .top-concept-2-text {
+    padding: 1rem;
+    font-size: 12px;
+  }
+  
+  .top-lesson {
+    padding: 100px 0 100px;
+    display: flex;
+    height:220px;
+    text-align:center;
+    background: #FFF;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient( 350deg, #ffffff 0 27%, #000000 23% 100%);
+  }
+
+  .top-lesson-h3 {
+    font-size: 27px;
+  }
+
+  .top-lesson-ul {
+    text-align: left;
+    letter-spacing: 1px;
+    line-height: 33px;
+    font-size: 16px;
+    color: transparent;
+    background: linear-gradient( 350deg, #030303 0 30%, #ffffff 29% 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  .top-lesson-img {
+    width: 70px;
+    top: 191px;
+    right: 20px;
+  }
+
+  .top-classes {
+    padding: 50px 0;
+  }
+
+  .top-classes-list {
+    gap: 10px;
+  }
+
+  .top-classes-link {
+    width: 100%;
+  }
+
+  .top-classes-link::after {
+    font-size: 16px;
+  }
+
+  .top-classes-link-img {
+    aspect-ratio: 2/1;
+  }
+
+  .top-blog-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .top-blog-card {
+    display: flex;
+    align-items: center;
+  }
+
+  .top-blog-img {
+    width: 29%;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  .top-h3 {
+    margin-bottom: 0;
+  }
+
+  .top-blog-card:nth-of-type(n+4) {
+    display: none;
+  }
+
+  .top-leaders-img {
+    height: 150px;
+  }
+
+  .top-h3-ttl-leaders {
+    margin-bottom: 0;
+  }
+
+  .top-leaders-a-btn {
+    width: 50px;
+    font-size: 18px;
+  }
+
+  .top-h3-access {
+    margin-bottom: 0;
+  }
+
+  .top-access-ggl-map {
+    width: 100%;
+  }
+
+  }
